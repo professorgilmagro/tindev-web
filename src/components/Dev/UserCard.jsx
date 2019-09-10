@@ -2,6 +2,7 @@ import React from 'react';
 
 import like from '../../assets/like.svg';
 import unlike from '../../assets/dislike.svg';
+import Button from '../Button';
 import './style.css';
 
 export default function UserCard(props) {
@@ -13,12 +14,16 @@ export default function UserCard(props) {
 				<p>{props.description}</p>
 			</footer>
 			<div className='buttons'>
-				<button type='button'>
-					<img src={like} alt='Like' />
-				</button>
-				<button type='button'>
-					<img src={unlike} alt='Unlike' />
-				</button>
+				<Button
+					alt='Like'
+					img={like}
+					onClick={() => props.likeCallback(props.id)}
+				/>
+				<Button
+					alt='Unlike'
+					img={unlike}
+					onClick={() => props.unlikeCallback(props.id)}
+				/>
 			</div>
 		</div>
 	);

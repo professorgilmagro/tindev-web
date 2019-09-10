@@ -16,6 +16,23 @@ export default function Main({ match }) {
 		}
 		loadUsers();
 	}, [match.params.id]);
+
+	async function __handleAction(id, action) {
+		await api.post(`/devs/${id}/${action}`, null, {
+			headers: { user: match.params.id }
+		});
+
+		setUsers(users.filter(user => user._id !== id));
+	}
+
+	async function handleLike(id) {
+		await __handleAction(id, 'like');
+	}
+
+	async function handleUnlike(id) {
+		await __handleAction(id, 'unlike');
+	}
+
 	return (
 		<div className='main-container'>
 			<Logo />
@@ -23,9 +40,12 @@ export default function Main({ match }) {
 				{users.map(user => (
 					<li key={user._id}>
 						<UserCard
+							id={user._id}
 							name={user.name}
 							description={user.bio}
 							avatar={user.avatar}
+							likeCallback={handleLike}
+							unlikeCallback={handleUnlike}
 						/>
 					</li>
 				))}

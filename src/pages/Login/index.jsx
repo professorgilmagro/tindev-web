@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import logo from '../../assets/logo.svg';
+import Logo from '../../components/Logo';
 import api from '../../services/api';
 import './style.css';
 
@@ -17,7 +17,7 @@ export default function Login({ history }) {
 	return (
 		<div className='login-container'>
 			<form onSubmit={handleSubmit}>
-				<img src={logo} alt='Tindev' />
+				<Logo />
 				<input
 					value={username}
 					onChange={e => setUsername(e.target.value)}

@@ -21,6 +21,8 @@
 .card-user footer strong {
 	font-size: 16px;
 	color: #333;
+	text-align: center;
+	display: block;
 }
 
 .card-user footer p {
@@ -50,4 +52,29 @@
 .card-user .buttons button:hover img {
 	transform: translateY(-5px);
 	transition: all 0.2s;
+}
+
+.card-user footer a.github-user,
+.card-user footer span.location {
+	display: block;
+	clear: both;
+	font-size: 12px;
+	text-decoration: none;
+	color: #333;
+	text-align: center;
+}
+
+.card-user footer a.github-user svg,
+.card-user footer span.location svg {
+	padding-top: 3px;
+	position: relative;
+	top: 3px;
+}
+
+.card-user footer a.github-user {
+	color: #df4723;
+}
+
+.card-user footer span.location {
+	font-size: 10px;
 }

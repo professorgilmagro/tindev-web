@@ -12,6 +12,10 @@
 	flex-direction: column;
 }
 
+.login-container form a {
+	margin: auto;
+}
+
 .login-container form input {
 	margin-top: 20px;
 	border: 1px solid#ddd;

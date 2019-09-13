@@ -1,6 +1,10 @@
 @font-face {
-	font-family: 'Open Sans Condensed';
-	src: url('assets/fonts/Open_Sans_Condensed/OpenSansCondensed-Light.ttf');
+	font-family: 'PoiretOne';
+	src: url('assets/fonts/Poiret_One/PoiretOne-Regular.ttf');
+}
+@font-face {
+	font-family: 'Sacramento';
+	src: url('assets/fonts/Sacramento/Sacramento-Regular.ttf');
 }
 
 @font-face {

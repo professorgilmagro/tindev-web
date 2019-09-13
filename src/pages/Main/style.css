@@ -24,8 +24,7 @@
 }
 
 .main-container .empty-message {
-	font-size: 32px;
+	font-size: 4em;
 	color: #dededece;
-	font-weight: bold;
-	margin-top: 300px;
+	font-family: Sacramento;
 }

@@ -11,6 +11,7 @@ export default function Main({ match, location }) {
 	const { logged } = location.state;
 	const [users, setUsers] = useState([]);
 	const [matchDev, setMatchDev] = useState(null);
+
 	useEffect(() => {
 		async function loadUsers() {
 			const response = await api.get('/devs', {
@@ -26,7 +27,7 @@ export default function Main({ match, location }) {
 	useEffect(() => {
 		const io = socket({ user: match.params.id });
 		io.on('match', dev => {
-			console.log(dev);
+			console.table(dev);
 			setMatchDev(dev);
 		});
 	}, [match.params.id]);

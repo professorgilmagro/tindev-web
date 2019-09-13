@@ -71,6 +71,10 @@
 	top: 3px;
 }
 
+.card-user footer a.github-user svg {
+	top: 5px;
+}
+
 .card-user footer a.github-user {
 	color: #df4723;
 }

@@ -3,6 +3,7 @@ import Logo from '../../components/Logo';
 import UserCard from '../../components/CardView/User';
 import MatchCard from '../../components/CardView/Match';
 import MessageNoItems from '../../components/MessageNoItems';
+import Loading from '../../components/Loading';
 import api from '../../services/api';
 import socket from '../../services/socket';
 import './style.css';
@@ -11,6 +12,7 @@ export default function Main({ match, location }) {
 	const { logged } = location.state;
 	const [users, setUsers] = useState([]);
 	const [matchDev, setMatchDev] = useState(null);
+	const [loading, setLoading] = useState(true);
 
 	useEffect(() => {
 		async function loadUsers() {
@@ -19,6 +21,8 @@ export default function Main({ match, location }) {
 			});
 
 			setUsers(response.data);
+			console.table(response.data[0]);
+			setLoading(false);
 		}
 		loadUsers();
 	}, [match.params.id]);
@@ -56,6 +60,7 @@ export default function Main({ match, location }) {
 		<div className='main-container'>
 			<Logo linkTo='/' />
 			<h4 className='logged-user'>{logged.name}</h4>
+			<Loading loading={loading} />
 			<ul>
 				{users.map(user => (
 					<li key={user._id}>

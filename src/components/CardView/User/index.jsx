@@ -6,11 +6,16 @@ import Button from '../../Button';
 import UserIcon from '@material-ui/icons/InsertLink';
 import LocalIcon from '@material-ui/icons/PlaceOutlined';
 import MoreIcon from '@material-ui/icons/MoreVert';
+import ThumbUp from '@material-ui/icons/ThumbUpAltRounded';
+import ThumbDown from '@material-ui/icons/ThumbDownAltRounded';
 import MessageNoItems from '../../../components/MessageNoItems';
 import './style.css';
 
 export default function UserCard(props) {
     const showButtons = props.showButtons === undefined || props.showButtons;
+    const showMenuInfo = props.showMenuInfo === undefined || props.showMenuInfo;
+    const showIconUp = props.showIconUp || false;
+    const showIconDown = props.showIconDown || false;
     const [showMenu, setShowMenu] = useState(false);
     const [selectedItem, setSelectedItem] = useState(null);
     const [itemsCount, setItemsCount] = useState(1);
@@ -19,12 +24,22 @@ export default function UserCard(props) {
     return (
         <div className='card-user'>
             <img src={props.avatar} alt={props.name} className='avatar' />
-            {showButtons && (
+            {showIconUp && (
+                <span className='icon-up-container'>
+                    <ThumbUp />
+                </span>
+            )}
+            {showIconDown && (
+                <span className='icon-down-container'>
+                    <ThumbDown />
+                </span>
+            )}
+            {showMenuInfo && (
                 <span className='more-information'>
                     <MoreIcon onClick={() => setShowMenu(true)} />
                 </span>
             )}
-            {showButtons && showMenu && (
+            {showMenu && (
                 <Fragment>
                     <div className='menu'>
                         <h4>Mais informações</h4>

@@ -1,58 +1,58 @@
 .match-container {
-	position: fixed;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	background: rgba(0, 0, 0, 0.9);
-	font-size: 1.4em;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.9);
+    font-size: 1.4em;
 }
 
 .match-container .card-user p,
 .match-container .card-user footer span.location,
 .match-container .card-user strong {
-	color: #fefefe;
+    color: #fefefe;
 }
 
 .match-container .card-user {
-	background: transparent;
-	color: #fefefe;
-	border: none;
-	width: 30%;
-	max-width: 400px;
-	height: auto;
+    background: transparent;
+    color: #fefefe;
+    border: none;
+    width: 30%;
+    max-width: 400px;
+    height: auto;
 }
 
 .match-container .card-user strong {
-	font-family: Sacramento;
-	font-size: 2.1em;
-	font-weight: normal;
+    font-family: Sacramento;
+    font-size: 2.1em;
+    font-weight: normal;
 }
 
 .match-container .card-user img {
-	border-radius: 50%;
-	border: 5px solid #dedede;
-	margin: 10px auto;
-	max-width: 260px;
+    border-radius: 50%;
+    border: 5px solid #dedede;
+    margin: 10px auto;
+    max-width: 260px;
 }
 
 .match-container .card-user footer {
-	background: transparent;
-	text-align: center;
+    background: transparent;
+    text-align: center;
 }
 
 .match-container button {
-	border: 0;
-	background: none;
-	font-weight: bold;
-	color: #fefefe;
-	cursor: pointer;
+    border: 0;
+    background: none;
+    font-weight: bold;
+    color: #fefefe;
+    cursor: pointer;
 }
 
 .match-container button:hover {
-	color: #df4723;
+    color: #df4723;
 }

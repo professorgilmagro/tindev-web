@@ -15,6 +15,21 @@
     min-height: 230px;
 }
 
+.card-user .icon-up-container,
+.card-user .icon-down-container {
+    position: absolute;
+    top: 6px;
+    left: 10px;
+}
+
+.card-user .icon-up-container {
+    color: green;
+}
+
+.card-user .icon-down-container {
+    color: red;
+}
+
 .card-user footer {
     flex: 1;
     padding: 15px 20px;

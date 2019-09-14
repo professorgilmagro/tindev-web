@@ -4,19 +4,28 @@ import UserCard from '../../components/CardView/User';
 import MatchCard from '../../components/CardView/Match';
 import MessageNoItems from '../../components/MessageNoItems';
 import Loading from '../../components/Loading';
+import Menu from '../../components/Menu';
 import api from '../../services/api';
 import socket from '../../services/socket';
+import menuItemsLinks from '../../config/menu';
 import './style.css';
 
-export default function Main({ match, location }) {
+export default function Main({ match, location, history }) {
     const { logged } = location.state;
     const [users, setUsers] = useState([]);
     const [matchDev, setMatchDev] = useState(null);
     const [loading, setLoading] = useState(true);
+    const { filterBy } = match.params;
 
     useEffect(() => {
         async function loadUsers() {
-            const response = await api.get('/devs', {
+            let url = '/devs';
+
+            if (filterBy) {
+                url = `/devs/${filterBy}`;
+            }
+
+            const response = await api.get(url, {
                 headers: { user: match.params.id }
             });
 
@@ -24,7 +33,7 @@ export default function Main({ match, location }) {
             setLoading(false);
         }
         loadUsers();
-    }, [match.params.id]);
+    }, [match.params.id, filterBy]);
 
     // implementa o recurso de realtime para notificação de match
     useEffect(() => {
@@ -60,9 +69,7 @@ export default function Main({ match, location }) {
             return [];
         }
 
-        const info = {};
-        info.jobs = [];
-        info.languages = [];
+        const info = { jobs: [], languages: [] };
         dev.repositories.map(({ language, name, url }) => {
             if (language && !info.languages.includes(language)) {
                 info.languages.push(language);
@@ -80,6 +87,13 @@ export default function Main({ match, location }) {
             <Logo linkTo='/' />
             <h4 className='logged-user'>{logged.name}</h4>
             <Loading loading={loading} />
+            {!loading && (
+                <Menu
+                    history={history}
+                    logged={logged}
+                    links={menuItemsLinks(match.params.id)}
+                />
+            )}
             <ul>
                 {users.map(user => (
                     <li key={user._id}>
@@ -93,6 +107,9 @@ export default function Main({ match, location }) {
                             avatar={user.avatar}
                             likeCallback={handleLike}
                             unlikeCallback={handleUnlike}
+                            showIconUp={filterBy === 'likeds'}
+                            showIconDown={filterBy === 'unlikeds'}
+                            showButtons={!filterBy}
                         />
                     </li>
                 ))}

@@ -1,0 +1,26 @@
+.custom-menu {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+}
+#menu-items-custom .MuiPopover-paper {
+    background: rgba(0, 0, 0, 0.7);
+}
+#menu-items-custom ul li {
+    text-decoration: none;
+    color: #f1f1f1;
+    font-size: 1em;
+    font-family: Rancho;
+    letter-spacing: 2px;
+}
+
+#menu-items-custom ul li svg {
+    position: relative;
+    padding-right: 6px;
+}
+
+#menu-items-custom ul li:hover,
+.custom-menu:hover {
+    color: #df4723;
+}

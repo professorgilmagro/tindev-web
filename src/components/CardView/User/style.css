@@ -1,120 +1,121 @@
 .card-user {
-    background: #fff;
-    border-radius: 6px;
-    width: 100%;
-    height: 100%;
-    position: relative;
+	background: #fff;
+	border-radius: 6px;
+	width: 100%;
+	height: 100%;
+	position: relative;
 }
 
 .card-user img {
-    max-width: 100%;
-    border-radius: 5px 5px 0 0;
+	max-width: 100%;
+	border-radius: 5px 5px 0 0;
 }
 
 .card-user img.avatar {
-    min-height: 230px;
+	min-height: 230px;
 }
 
 .card-user .icon-up-container,
 .card-user .icon-down-container {
-    position: absolute;
-    top: 6px;
-    left: 10px;
+	position: absolute;
+	top: 6px;
+	left: 10px;
 }
 
 .card-user .icon-up-container {
-    color: green;
+	color: green;
 }
 
 .card-user .icon-down-container {
-    color: red;
+	color: red;
 }
 
 .card-user footer {
-    flex: 1;
-    padding: 15px 20px;
-    text-align: left;
-    background: #fff;
-    color: #1a1919fb;
-    position: relative;
+	flex: 1;
+	padding: 15px 20px;
+	text-align: left;
+	background: #fff;
+	color: #1a1919fb;
+	position: relative;
 }
 
 .card-user footer strong {
-    font-size: 1em;
-    color: #333;
-    text-align: center;
-    display: block;
+	font-size: 1em;
+	color: #333;
+	text-align: center;
+	display: block;
 }
 
 .card-user footer p {
-    font-size: 14px;
-    line-height: 20px;
-    color: #999;
-    margin-top: 5px;
+	font-size: 14px;
+	line-height: 20px;
+	color: #999;
+	margin-top: 5px;
 }
 
 .card-user .buttons {
-    margin-top: 10px;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 10px;
-    bottom: 0;
+	margin-top: 10px;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-gap: 10px;
+	bottom: 0;
 }
 
 .card-user .buttons button {
-    height: 50px;
-    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.05);
-    border: 0;
-    border-radius: 4px;
-    background: #fff;
-    cursor: pointer;
+	height: 50px;
+	box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.05);
+	border: 0;
+	border-radius: 4px;
+	background: #fff;
+	cursor: pointer;
 }
 
 .card-user .buttons button:hover img {
-    transform: translateY(-5px);
-    transition: all 0.2s;
+	transform: translateY(-5px);
+	transition: all 0.2s;
 }
 
 .card-user footer a.github-user,
 .card-user footer span.location {
-    display: block;
-    clear: both;
-    font-size: 12px;
-    text-decoration: none;
-    color: #333;
-    text-align: center;
+	display: block;
+	clear: both;
+	font-size: 12px;
+	text-decoration: none;
+	color: #333;
+	text-align: center;
 }
 
 .card-user footer a.github-user svg,
 .card-user footer span.location svg {
-    padding-top: 3px;
-    position: relative;
-    top: 3px;
+	padding-top: 3px;
+	position: relative;
+	top: 3px;
 }
 
 .card-user footer a.github-user svg {
-    top: 5px;
+	top: 5px;
 }
 
 .card-user footer a.github-user {
-    color: #df4723;
+	color: #df4723;
 }
 
 .card-user footer span.location {
-    font-size: 10px;
+	font-size: 10px;
 }
 
 .card-user .more-information {
-    position: absolute;
-    right: 4px;
-    top: 4px;
-    cursor: pointer;
-    color: #fff;
-    width: 30px;
-    height: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+	position: absolute;
+	right: 4px;
+	top: 4px;
+	cursor: pointer;
+	color: #fff;
+	width: 30px;
+	height: 30px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	mix-blend-mode: difference;
 }
 
 .card-user .additional-info-content button:hover,
@@ -122,141 +123,141 @@
 .card-user .menu ul li:hover,
 .card-user .additional-info-content li a:hover,
 .card-user .more-information:hover {
-    color: #df4723;
+	color: #df4723;
 }
 
 .card-user .menu {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    align-self: center;
-    width: 100%;
-    min-height: 230px;
-    padding: 10px;
-    background: rgba(0, 0, 0, 0.85);
-    position: absolute;
-    top: 0;
-    right: 0;
-    z-index: 999;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	align-self: center;
+	width: 100%;
+	min-height: 230px;
+	padding: 10px;
+	background: rgba(0, 0, 0, 0.85);
+	position: absolute;
+	top: 0;
+	right: 0;
+	z-index: 999;
 }
 
 .card-user .additional-info-content h4,
 .card-user .menu h4 {
-    color: #df4723;
-    font-weight: bold;
-    font-size: 1em;
-    letter-spacing: 2px;
-    text-align: center;
-    font-family: 'Amatic';
-    font-weight: bold;
-    margin-bottom: 10px;
+	color: #df4723;
+	font-weight: bold;
+	font-size: 1em;
+	letter-spacing: 2px;
+	text-align: center;
+	font-family: 'Amatic';
+	font-weight: bold;
+	margin-bottom: 10px;
 }
 
 .card-user .additional-info-content ul,
 .card-user .menu ul {
-    display: block;
-    text-align: center;
-    margin: 0;
+	display: block;
+	text-align: center;
+	margin: 0;
 }
 
 .card-user .additional-info-content ul li,
 .card-user .menu ul li {
-    display: block;
-    clear: both;
-    list-style: none;
-    color: #fff;
-    cursor: pointer;
-    font-size: 0.8em;
-    padding: 8px 4px;
-    font-family: PoiretOne;
-    font-weight: bold;
+	display: block;
+	clear: both;
+	list-style: none;
+	color: #fff;
+	cursor: pointer;
+	font-size: 0.8em;
+	padding: 8px 4px;
+	font-family: PoiretOne;
+	font-weight: bold;
 }
 
 .card-user .additional-info-content button,
 .card-user .menu button {
-    border: none;
-    background: rgba(255, 255, 255, 0.6);
-    text-align: center;
-    font-family: Rancho;
-    position: absolute;
-    border-radius: 20px;
-    bottom: 10px;
-    padding: 8px 12px;
-    color: #000;
-    letter-spacing: 2px;
-    cursor: pointer;
+	border: none;
+	background: rgba(255, 255, 255, 0.6);
+	text-align: center;
+	font-family: Rancho;
+	position: absolute;
+	border-radius: 20px;
+	bottom: 10px;
+	padding: 8px 12px;
+	color: #000;
+	letter-spacing: 2px;
+	cursor: pointer;
 }
 
 .card-user .additional-info-content ul li {
-    font-size: 1.2em;
+	font-size: 1.2em;
 }
 .card-user .additional-info-content ul li {
-    font-size: 1.2em;
+	font-size: 1.2em;
 }
 
 .card-user .additional-info-content ul li a {
-    color: aliceblue;
-    text-decoration: none;
-    font-size: 0.6em;
+	color: aliceblue;
+	text-decoration: none;
+	font-size: 0.6em;
 }
 
 .card-user .additional-info-content ul {
-    overflow-y: auto;
-    margin: 20px 5px;
+	overflow-y: auto;
+	margin: 20px 5px;
 }
 
 .card-user .additional-info-content ul.jobs li {
-    padding: 4px;
+	padding: 4px;
 }
 
 .card-user .additional-info-content {
-    display: flex;
-    background: rgba(0, 0, 0, 0.9);
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    justify-content: center;
-    align-items: center;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: 999;
-    color: #df4723;
+	display: flex;
+	background: rgba(0, 0, 0, 0.9);
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	justify-content: center;
+	align-items: center;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 999;
+	color: #df4723;
 }
 .card-user .additional-info-content .empty-message {
-    font-size: 1.4em;
-    font-family: Rancho;
-    padding: 10px;
+	font-size: 1.4em;
+	font-family: Rancho;
+	padding: 10px;
 }
 
 .card-user .additional-info-content h4 {
-    margin-top: 16px;
-    font-size: 1.8em;
+	margin-top: 16px;
+	font-size: 1.8em;
 }
 
 .card-user .additional-info-content .info-conteiner {
-    overflow: hidden;
-    margin-bottom: 30px;
-    width: 100%;
+	overflow: hidden;
+	margin-bottom: 30px;
+	width: 100%;
 }
 
 /* width */
 ::-webkit-scrollbar {
-    width: 6px;
+	width: 6px;
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
-    background: #555;
+	background: #555;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-    background: #df4723;
+	background: #df4723;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-    background: #f1f1f1;
+	background: #f1f1f1;
 }

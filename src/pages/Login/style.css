@@ -41,3 +41,8 @@
 	color: #fff;
 	cursor: pointer;
 }
+
+.login-container .alert {
+	margin-top: 20px;
+	background: transparent;
+}

@@ -1,26 +1,42 @@
 .custom-menu {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    cursor: pointer;
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	cursor: pointer;
 }
 #menu-items-custom .MuiPopover-paper {
-    background: rgba(0, 0, 0, 0.7);
+	background: rgba(0, 0, 0, 0.8);
 }
 #menu-items-custom ul li {
-    text-decoration: none;
-    color: #f1f1f1;
-    font-size: 1em;
-    font-family: Rancho;
-    letter-spacing: 2px;
+	text-decoration: none;
+	color: #f1f1f1;
+	font-size: 1em;
+	font-family: Rancho;
+	letter-spacing: 2px;
 }
 
 #menu-items-custom ul li svg {
-    position: relative;
-    padding-right: 6px;
+	position: relative;
+	padding-right: 6px;
 }
 
 #menu-items-custom ul li:hover,
 .custom-menu:hover {
-    color: #df4723;
+	color: #df4723;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+	#menu-items-custom {
+		font-size: 1.6em;
+		right: 40px;
+	}
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
 }

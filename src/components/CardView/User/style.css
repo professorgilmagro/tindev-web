@@ -57,9 +57,9 @@
 
 .card-user .buttons {
 	margin-top: 10px;
-	display: grid;
-	grid-template-columns: repeat(2, 1fr);
-	grid-gap: 10px;
+	display: flex;
+	justify-content: space-around;
+	flex-direction: row;
 	bottom: 0;
 }
 

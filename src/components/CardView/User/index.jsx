@@ -12,10 +12,16 @@ import MessageNoItems from '../../../components/MessageNoItems';
 import './style.css';
 
 export default function UserCard(props) {
-	const showButtons = props.showButtons === undefined || props.showButtons;
 	const showMenuInfo = props.showMenuInfo === undefined || props.showMenuInfo;
-	const showIconUp = props.showIconUp || false;
-	const showIconDown = props.showIconDown || false;
+	const showButtonLike =
+		props.showButtonLike === undefined || props.showButtonLike;
+	const showButtonUnlike =
+		props.showButtonUnlike === undefined || props.showButtonUnlike;
+	const showButtons = showButtonLike || showButtonUnlike;
+	const showIconUp =
+		props.showIconUp === undefined ? false : props.showIconUp;
+	const showIconDown =
+		props.showIconDown === undefined ? false : props.showIconDown;
 	const [showMenu, setShowMenu] = useState(false);
 	const [selectedItem, setSelectedItem] = useState(null);
 	const [itemsCount, setItemsCount] = useState(1);
@@ -135,16 +141,20 @@ export default function UserCard(props) {
 			</footer>
 			{showButtons && (
 				<div className='buttons'>
-					<Button
-						alt='Like'
-						img={like}
-						onClick={() => props.likeCallback(props.id)}
-					/>
-					<Button
-						alt='Unlike'
-						img={unlike}
-						onClick={() => props.unlikeCallback(props.id)}
-					/>
+					{showButtonLike && (
+						<Button
+							alt='Like'
+							img={like}
+							onClick={() => props.likeCallback(props.id)}
+						/>
+					)}
+					{showButtonUnlike && (
+						<Button
+							alt='Unlike'
+							img={unlike}
+							onClick={() => props.unlikeCallback(props.id)}
+						/>
+					)}
 				</div>
 			)}
 		</div>
